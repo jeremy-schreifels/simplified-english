@@ -1,4 +1,3 @@
-```markdown
 # Simplified Technical English (ASD-STE100) Skill
 
 An AI agent skill that rewrites dense, ambiguous, or hedged English into unambiguous *Simplified Technical English (ASD-STE100)*.
@@ -7,8 +6,6 @@ ASD-STE100 is a controlled-language specification originally created by the aero
 
 This skill adapts that discipline for AI outputs (e.g., tool descriptions, error messages, runbooks, and inter-agent instructions) that must be parsed reliably by LLMs, translation pipelines, or engineers without a human in the loop to clarify intent.
 
----
-
 ## Features
 * **Two Operating Modes:**
   * **`Strict` Mode:** Enforces hard sentence-length caps, active voice, zero phrasal verbs, zero nominalizations, and strict one-word-one-meaning consistency. Ideal for system prompts, tool definitions, error strings, and runbooks.
@@ -16,17 +13,13 @@ This skill adapts that discipline for AI outputs (e.g., tool descriptions, error
 * **Modality & Precision Guardrails:** Strips throat-clearing and stacked qualifiers (`"it is worth noting that this might potentially..."`) while strictly preserving factual epistemic hedges (`"may"`, `"could"`). Never upgrades a possibility into a false certainty just to shorten a sentence.
 * **Drop-In Output by Default:** Returns only the rewritten text for immediate copy-pasting, or generates a full *Before/After Rule Violations Table* on request.
 
----
-
 ## Repository Structure
 
 ```text
 simplified-english/
 ├── SKILL.md                   # Core agent instructions and rewrite state machine
-├── README.md                  # Human documentation, background, and CLI usage
+└── README.md                  # Human documentation, background, and CLI usage
 ```
-
----
 
 ## Usage with AI LLMs
 
@@ -47,10 +40,7 @@ Once installed in your agent's skill directory, invoke the skill naturally:
 
 **Default Output (`Strict` Mode):**
 
-```text
-The handler that sets task-queue priority may start a background worker if the system did not process the payload. If you do not back up a file, the system deletes it during a restart.
-
-```
+> The handler that sets task-queue priority may start a background worker if the system did not process the payload. If you do not back up a file, the system deletes it during a restart.
 
 **Diagnostic Output (When asking to *"show changes"* or *"explain rules"*):**
 
@@ -65,15 +55,9 @@ The handler that sets task-queue priority may start a background worker if the s
 
 `Mode: Strict | Violations fixed: 6`
 
-```
-
----
-
 ## Source, Scope, and Copyright Notice
 
 This skill encodes the **structural rule categories** of **ASD-STE100 Issue 9 (January 2025)**: 53 writing rules across 9 sections covering word choice, grammar, sentence structure, and style. This skill does not apply all ASD-STE100 rules and does not use the approved word/unapproved word dictionaries. This is not an official ASD product.
-
----
 
 ## Acknowledgments & Credits
 
