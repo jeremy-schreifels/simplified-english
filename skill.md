@@ -72,9 +72,8 @@ Output **only** the rewritten text so the user can copy-paste it directly into c
 
 ### Diagnostic Output (Only When Requested)
 If the user asks for an explanation, diff, or before/after breakdown ("show changes", "which rules broke", "before/after"), output:
-1. The complete **Rewritten Text** block first.
-2. A **Rule Violations Table**:
-   ```markdown
+1. The complete *Rewritten Text* block first.
+2. A *Rule Violations Table*:
    | Rule Violated | Original | Simplified |
    |---|---|---|
    | Present perfect tense | "We have received your request." | "We received your request." |
