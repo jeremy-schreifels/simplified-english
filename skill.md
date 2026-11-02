@@ -81,3 +81,4 @@ If the user asks for an explanation, diff, or before/after breakdown ("show chan
    | Noun cluster (4+ words) | "the agent task queue priority handler" | "the handler that sets task-queue priority" |
 
    Mode: <Strict STE-Flavored |> | Violations fixed: <N>
+3. Any Kept as-is: notes (if applicable).
